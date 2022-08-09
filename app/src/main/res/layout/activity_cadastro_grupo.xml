@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="activity.CadastroGrupoActivity"
+    android:orientation="vertical"
+    >
+
+    <Toolbar
+        android:id="@+id/toolbarCadastroGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#054d44"
+        android:title="Novo Grupo"
+        android:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints"
+        android:subtitleTextColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imagemGrupo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/padrao" />
+
+            <EditText
+                android:id="@+id/editNomeGrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Nome do Grupo"
+                android:backgroundTint="#25d366"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Defina um nome e uma imagem (opcional)" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textTotalParticipantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participantes: 0"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMembrosGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="activity.CadastroGrupoActivity"
+        >
+
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSalvarGrupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_baseline_check_24"
+            app:fabSize="normal"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</LinearLayout>
+
